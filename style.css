@@ -1,0 +1,124 @@
+:root {
+    --emergency-red: #e74c3c;
+    --police-blue: #2a52be;
+    --ambulance-red: #cc0000;
+    --fire-orange: #ff6600;
+    --voice-green: #27ae60;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.language-selector {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.language-selector select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+h1 {
+    color: var(--emergency-red);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    filter: brightness(90%);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.emergency-buttons {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#policeBtn { background: var(--police-blue); }
+#ambulanceBtn { background: var(--ambulance-red); }
+#fireBtn { background: var(--fire-orange); }
+#manualBtn { background: var(--emergency-red); }
+#voiceBtn { background: var(--voice-green); }
+
+#qrcode {
+    margin: 15px auto;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.status {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.success { background-color: #d4edda; color: #155724; }
+.error { background-color: #f8d7da; color: #721c24; }
+.hidden { display: none; }
+
+.voice-status {
+    font-style: italic;
+    color: #7f8c8d;
+    text-align: center;
+    margin: 10px 0;
+    min-height: 20px;
+}
+
+@media (max-width: 600px) {
+    .container { padding: 15px; }
+    h1 { font-size: 1.8em; }
+}
